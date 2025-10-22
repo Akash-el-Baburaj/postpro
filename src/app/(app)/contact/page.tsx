@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { RiArrowDownWideLine } from '@remixicon/react'
-import FadeIn from '@/components/FadeIn';
+import FadeContent from '@/components/FadeContent';
 import ContactInfo from '@/components/ContactInfo';
 import FAQSection from '@/components/FaqSection';
 
@@ -144,14 +144,14 @@ export default function ContactCard() {
         </div>
       </div>
 
-      <FadeIn offsetY={60}>
+      <FadeContent blur={true} duration={1500} easing="ease-out" initialOpacity={0}>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <ContactInfo />
         </div>
-      </FadeIn>
-      <FadeIn offsetY={60}>
+      </FadeContent>
+      <FadeContent blur={true} duration={1500} easing="ease-out" initialOpacity={0}>
         <FAQSection />
-      </FadeIn>
+      </FadeContent>
     </section>
   );
 }

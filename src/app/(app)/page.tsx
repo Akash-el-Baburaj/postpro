@@ -2,7 +2,7 @@
 import AboutCounter from "@/components/AboutCounter";
 import Clients from "@/components/Clients";
 import ComparisonSection from "@/components/ComparisonSection";
-import FadeIn from "@/components/FadeIn";
+import FadeContent from "@/components/FadeContent";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Process from "@/components/Processes";
@@ -16,9 +16,9 @@ export default function Home() {
    <>
       <div className="font-sans relative isolate bg-gray-900 overflow-hidden items-center justify-items-center">
         <Hero />
-        <FadeIn offsetY={60}>
+        <FadeContent blur={true} duration={1500} easing="ease-out" initialOpacity={0}>
           <Features />  
-        </FadeIn>
+        </FadeContent>
       </div>
        <div className="relative min-h-screen min-w-full overflow-hidden">
           <ComparisonSection />
@@ -26,23 +26,23 @@ export default function Home() {
       <div className="relative isolate bg-gray-900 pt-4 pb-6 sm:pt-32 md:pt-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           
-          <FadeIn offsetY={60}>
+          <FadeContent blur={true} duration={1500} easing="ease-out" initialOpacity={0}>
             <div >
                 <HorizontalScrollAnimation />
             </div>
-          </FadeIn>
-          <FadeIn offsetY={60}>
+          </FadeContent>
+          <FadeContent blur={true} duration={1500} easing="ease-out" initialOpacity={0}>
             <AboutCounter />
-          </FadeIn>
-          <FadeIn offsetY={60}>
+          </FadeContent>
+          <FadeContent blur={true} duration={1500} easing="ease-out" initialOpacity={0}>
             <Process />
-          </FadeIn>
-          <FadeIn offsetY={60}>
+          </FadeContent>
+          <FadeContent blur={true} duration={1500} easing="ease-out" initialOpacity={0}>
             <Clients />
-          </FadeIn>
-          <FadeIn offsetY={60}>
+          </FadeContent>
+          <FadeContent blur={true} duration={1500} easing="ease-out" initialOpacity={0}>
             <Teams />
-          </FadeIn>
+          </FadeContent>
         </div>
       </div>
     </>
