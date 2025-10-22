@@ -134,7 +134,7 @@ export default function AboutSection() {
               </p>
               <p className="text-gray-300 text-sm leading-relaxed">
                 We are committed to creating designs that inspire, connect, and elevate our
-                clients in the marketplace. Our focus is on understanding our clients' unique
+                clients in the marketplace. Our focus is on understanding our clients&apos; unique
                 needs and delivering designs that not only meet but exceed their expectations.
               </p>
             </div>

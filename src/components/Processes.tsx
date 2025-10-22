@@ -31,7 +31,7 @@ export default function Process() {
                 The Art of Process
               </p>
               <p className="mt-2 text-xl font-semibold tracking-tight text-pretty text-white sm:text-2xl">
-                A great video doesn't happen by chance.
+                A great video doesn&apos;t happen by chance.
               </p>
               <p className="mt-6 text-lg/8 text-gray-300">
                 Our production process is a blend of creative vision and strategic precision, refined over 8+ years and 250+ projects.

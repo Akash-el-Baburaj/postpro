@@ -131,7 +131,7 @@ export default function ContactDropdown({ isOpen, onClose }: ContactDropdownProp
             type="submit"
             className="w-full bg-indigo-500 text-white py-2 rounded-md font-medium hover:bg-indigo-600 transition"
           >
-            Let's talk
+            Let&apos;s talk
           </button>
         </form>
       </div>
