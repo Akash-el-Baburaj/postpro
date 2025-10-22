@@ -96,7 +96,7 @@ export default function AboutSection() {
     <section className="bg-gradient-to-b from-gray-900 to-gray-900 text-white py-16 md:py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 max-w-4xl">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl mt-10 font-bold mb-12 max-w-4xl">
           We think our story is worth sharing with you
         </h1>
 
