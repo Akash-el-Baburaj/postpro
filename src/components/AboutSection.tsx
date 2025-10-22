@@ -103,7 +103,7 @@ export default function AboutSection() {
         {/* ==== MAIN GRID ==== */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* ---- LEFT: TEXT ---- */}
-          <div className="space-y-10">
+          <div className="space-y-10 order-first">
             {/* Intro paragraph */}
             <p className="text-gray-300 text-base leading-relaxed">
               Established in 2018, we began as a small but ambitious team. We understood the
@@ -141,10 +141,10 @@ export default function AboutSection() {
           </div>
 
           {/* ---- RIGHT: IMAGE GRID ---- */}
-          <div className="grid grid-cols-5 gap-4 auto-rows-min order-first lg:order-last">
+          <div className="grid grid-cols-5 gap-4 auto-rows-min lg:order-last hidden lg:grid">
             {/* 1. Top-left – spans 2 cols (large) */}
             <div className="col-span-3 lg:col-span-3 row-span-1">
-              <div className="relative w-full h-48 sm:h-56 lg:h-64 rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative w-full h-48  lg:h-64 rounded-2xl overflow-hidden shadow-xl">
                 <Image
                   src="/images/about/image-02.webp"
                   alt="Team brainstorming"
@@ -158,7 +158,7 @@ export default function AboutSection() {
 
             {/* 2. Top-right – 1 col (small) */}
             <div className="col-span-3 lg:col-span-2 row-span-1">
-              <div className="relative w-full h-48 sm:h-56 lg:h-64 rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative w-full h-48 lg:h-64 rounded-2xl overflow-hidden shadow-xl">
                 <Image
                   src="/images/about/image-03.webp"
                   alt="Creative workspace"
@@ -194,6 +194,46 @@ export default function AboutSection() {
                 />
               </div>
             </div>
+          </div>
+
+          <div className="flex flex-col gap-4 lg:hidden sm:flex">
+            <div className="relative w-full h-48 lg:h-64 rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/about/image-02.webp"
+                  alt="Team brainstorming"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+              <div className="relative w-full h-48 lg:h-64 rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/about/image-03.webp"
+                  alt="Creative workspace"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 25vw"
+                />
+              </div>
+              <div className="relative w-full h-40 sm:h-48 rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/about/image-04.webp"
+                  alt="Design process"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
+                />
+              </div>
+               <div className="relative w-full h-40 sm:h-48 rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/about/image-01.webp"
+                  alt="Project delivery"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 66vw, 40vw"
+                />
+              </div>
           </div>
         </div>
       </div>
