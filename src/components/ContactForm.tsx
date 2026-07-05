@@ -15,11 +15,11 @@ export default function Contact() {
           className="relative left-1/2 -z-10 aspect-1155/678 w-144.5 max-w-none -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-40rem)] sm:w-288.75"
         />
       </div>
-      <div className="mx-auto max-w-2xl text-left">
+      <div className="w-full text-left">
         {/* <h2 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Contact sales</h2> */}
         <p className="mb-3 text-xs font-bold uppercase tracking-[.16em] text-[#ff7952]">Quick enquiry</p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-0 max-w-xl sm:mt-0">
+      <form action="#" method="POST" className="mt-0 w-full sm:mt-0">
         <div className="grid grid-cols-1 gap-x-8 gap-y-2 sm:grid-cols-2">
           <div>
             {/* <label htmlFor="first-name" className="block text-sm/6 font-semibold text-white">
