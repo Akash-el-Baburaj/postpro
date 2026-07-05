@@ -248,18 +248,19 @@ export default function ServicesGrid() {
     },
   ];
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8" id="service">
-      <div className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Have a wide range ofcreative projects.</h2>
+    <section className="section-pad px-0" id="service">
+      <div className="mb-12 flex flex-col gap-5 px-1 sm:flex-row sm:items-end sm:justify-between">
+        <div><p className="eyebrow mb-4">Selected work</p><h2 className="section-title max-w-2xl">A wide range of creative projects.</h2></div>
+        <p className="max-w-sm text-sm leading-6 text-white/45">Films, campaigns, motion and digital experiences—crafted with one consistent standard.</p>
         {/* <p className="text-gray-400 mb-6">
             Bold brand stories, scroll stopping reels, we help your business shine through visuals that people remember and love.
         </p> */}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-7xl mx-auto">
         {services.map((service) => (
           <div
             key={service.id}
-            className="relative group w-full max-w-[650px]  aspect-[16/9] overflow-hidden rounded-xl shadow-lg cursor-pointer transition-transform duration-300 hover:scale-105"
+            className={`relative group w-full aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 shadow-2xl transition-all duration-500 hover:-translate-y-1 hover:border-white/20 ${service.id === 'tvc' ? 'sm:col-span-2 sm:aspect-[2.2/1]' : ''}`}
           >
             {/* Background Image */}
             <div className="absolute inset-0">
@@ -267,17 +268,18 @@ export default function ServicesGrid() {
                 src={service.image}
                 alt={service.title}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent opacity-90" />
 
             {/* Content */}
-            <div className="relative h-full flex flex-col justify-end p-6 text-white">
-              <h3 className="text-2xl font-bold mb-2 drop-shadow-md">
+            <div className="relative h-full flex flex-col justify-end p-6 text-white sm:p-8">
+              <span className="mb-3 text-xs uppercase tracking-[.16em] text-[#ff8a63]">Project / {service.id.replace('-', ' ')}</span>
+              <h3 className="text-2xl font-semibold tracking-tight mb-2 drop-shadow-md sm:text-3xl">
                 {service.title}
               </h3>
               <p className="text-sm leading-relaxed opacity-90 line-clamp-3 drop-shadow">
@@ -286,7 +288,8 @@ export default function ServicesGrid() {
             </div>
 
             {/* Hover Reveal (optional enhancement) */}
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
+            <div className="pointer-events-none absolute right-6 top-6 grid size-11 place-items-center rounded-full border border-white/20 bg-black/20 text-xl text-white opacity-0 backdrop-blur-md transition-all group-hover:opacity-100 group-hover:rotate-6">↗</div>
+            <div className="hidden">
               <p className="text-white text-center text-sm leading-relaxed">
                 {service.description}
               </p>

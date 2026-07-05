@@ -89,7 +89,7 @@ export default function HorizontalScrollSection() {
           document.body.style.overflowY = 'auto';
         } else {
           // otherwise lock page scroll (horizontal scroll takes priority)
-          document.body.style.overflowY = 'hidden';
+          document.body.style.overflowY = 'auto';
         }
       },
       { root: null, threshold: 0.1 }
@@ -112,7 +112,7 @@ export default function HorizontalScrollSection() {
       {/* -------------------------------------------------
           HORIZONTAL SECTION
           ------------------------------------------------- */}
-      <section className="relative bg-gray-950 py-16 md:py-20 lg:py-24 overflow-hidden">
+      <section data-scroll-complete={canScrollPage} className="relative bg-gray-950 py-16 md:py-20 lg:py-24 overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
             Our Services
@@ -189,7 +189,7 @@ export default function HorizontalScrollSection() {
           </p>
           <a
             href="/contact"
-            className="inline-block px-8 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition"
+            className="inline-block px-8 py-3 bg-[#ff5d35] text-white font-medium rounded-full hover:bg-[#ff7048] transition"
           >
             Contact Us
           </a>

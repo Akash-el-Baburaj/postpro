@@ -96,6 +96,7 @@
 // }
 'use client'
 import React from 'react'
+import Image from 'next/image'
 
 const people = [
   {
@@ -150,15 +151,15 @@ const people = [
 
 export default function Teams() {
   return (
-    <div className="bg-gray-900 py-24 sm:py-32">
+    <section className="section-pad">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-4xl text-center font-semibold text-white sm:text-5xl mb-6 leading-tight">
-               We have a team of <br /> creative people
+        <p className="eyebrow mb-4 text-center">The people</p><h2 className="section-title mx-auto mb-12 max-w-2xl text-center text-white">
+               Small team. Big range.
              </h2>
         {/* Title and Team Grid */}
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 ">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 ">
           {/* Title Block */}
-          <div className="flex flex-col justify-center ">
+          <div className="flex min-h-28 flex-col justify-center rounded-2xl border border-dashed border-white/15 p-6">
             {/* <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-white leading-tight">
               We have a team ofcreative people
             </h2> */}
@@ -170,22 +171,24 @@ export default function Teams() {
           {/* Team Members */}
           {people.map((person) => (
             <div
-              key={person.id}
-              className="flex flex-wrap items-center bg-gray-800 px-5 py-4 pb-0  backdrop-blur-sm rounded-2xl shadow-lg hover:bg-gray-800/70 hover:scale-[1.02] transition duration-300"
+              key={`${person.name}-${person.role}`}
+              className="glass-card flex items-center rounded-2xl p-4 transition duration-300 hover:-translate-y-1 hover:border-white/20"
             >
-              <img
+              <Image
                 src={person.imageUrl}
                 alt={person.name}
-                className="w-16 h-16 rounded-full object-cover mb-4 border border-gray-700"
+                width={64}
+                height={64}
+                className="w-16 h-16 rounded-xl object-cover border border-white/10 grayscale transition duration-300 hover:grayscale-0"
               />
               <div className="ml-3 flex flex-col justify-start h-16">
                 <h3 className="text-lg font-semibold text-white">{person.name}</h3>
-              <p className="text-sm text-indigo-400 font-medium">{person.role}</p>
+              <p className="text-sm text-[#ff7952] font-medium">{person.role}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }

@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import { RiArrowDownWideLine } from '@remixicon/react'
 import FadeContent from '@/components/FadeContent';
@@ -9,21 +8,19 @@ import FAQSection from '@/components/FaqSection';
 
 
 export default function ContactCard() {
-  const [budget, setBudget] = useState<string>('');
-
   return (
-    <section className="bg-gray-950 py-32 md:py-20 lg:py-32">
+    <section className="overflow-hidden pb-16 pt-32 sm:pt-40">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Two-column layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0 items-center">
+        <div className="glass-card grid grid-cols-1 overflow-hidden rounded-[2rem] lg:grid-cols-2 items-stretch">
           {/* ───── LEFT – FORM ───── */}
-          <div className="lg:pr-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <div className="p-7 sm:p-10 lg:p-14">
+            <p className="eyebrow mb-4">Let&apos;s make something</p><h1 className="section-title text-white mb-5">
               {/* Let&apos;s work together */}
               Contact us for a personal experience
-            </h2>
-            <p className="text-gray-400 mb-8 max-w-lg">
-              Ready to start a project with us?
+            </h1>
+            <p className="text-white/45 mb-9 max-w-lg leading-7">
+              Tell us what you&apos;re imagining. We&apos;ll bring the coffee, the questions, and a practical way forward.
             </p>
 
             <form className="space-y-6">
@@ -37,7 +34,7 @@ export default function ContactCard() {
                     id="first"
                     type="text"
                     placeholder="John"
-                    className="w-full bg-gray-900/70 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 transition"
+                    className="w-full bg-white/[.04] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#ff7048] focus:ring-2 focus:ring-[#ff7048]/20 transition"
                   />
                 </div>
                 <div>
@@ -48,7 +45,7 @@ export default function ContactCard() {
                     id="last"
                     type="text"
                     placeholder="Doe"
-                    className="w-full bg-gray-900/70 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 transition"
+                    className="w-full bg-white/[.04] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#ff7048] focus:ring-2 focus:ring-[#ff7048]/20 transition"
                   />
                 </div>
               </div>
@@ -62,7 +59,7 @@ export default function ContactCard() {
                   id="email"
                   type="email"
                   placeholder="you@example.com"
-                  className="w-full bg-gray-900/70 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 transition"
+                  className="w-full bg-white/[.04] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#ff7048] focus:ring-2 focus:ring-[#ff7048]/20 transition"
                 />
               </div>
 
@@ -72,18 +69,18 @@ export default function ContactCard() {
                   Phone
                   <span className="ml-2 text-xs text-gray-500">(Optional)</span>
                 </label>
-                <div className="flex border border-gray-700 rounded-lg bg-white/5 outline-1 -outline-offset-1 outline-white/10 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-500">
+                <div className="flex border border-white/10 rounded-xl bg-white/[.04] has-[input:focus-within]:border-[#ff7048] has-[input:focus-within]:ring-2 has-[input:focus-within]:ring-[#ff7048]/20">
                     <div className="grid shrink-0 grid-cols-1 focus-within:relative">
                     <select
                         id="country"
                         name="country"
                         autoComplete="country"
                         aria-label="Country"
-                        className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-gray-900/70 py-3 pr-7 pl-3.5 text-base text-gray-400 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
+                        className="col-start-1 row-start-1 w-full appearance-none rounded-xl bg-transparent py-3 pr-7 pl-3.5 text-base text-gray-400 focus:outline-none sm:text-sm/6"
                     >
-                        <option className='text-dark'>+91</option>
-                        <option className='text-dark'>+1</option>
-                        <option className='text-dark'>+921</option>
+                        <option className='text-black'>+91</option>
+                        <option className='text-black'>+1</option>
+                        <option className='text-black'>+44</option>
                     </select>
                     <RiArrowDownWideLine
                         aria-hidden="true"
@@ -95,7 +92,7 @@ export default function ContactCard() {
                     name="phone-number"
                     type="text"
                     placeholder="123-456-7890"
-                    className="block min-w-0 grow bg-gray-900/70  py-3 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6"
+                    className="block min-w-0 grow bg-transparent py-3 pr-3 pl-1 text-base text-white placeholder:text-gray-600 focus:outline-none sm:text-sm/6"
                     />
                 </div>
 
@@ -118,14 +115,14 @@ export default function ContactCard() {
                   rows={4}
                   maxLength={500}
                   placeholder="Tell us about your project..."
-                  className="w-full bg-gray-900/70 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 transition resize-none"
+                  className="w-full bg-white/[.04] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#ff7048] focus:ring-2 focus:ring-[#ff7048]/20 transition resize-none"
                 />
               </div>
 
               {/* Submit */}
               <button
                 type="submit"
-                className="w-full md:w-auto px-8 py-3 bg-indigo-600  text-white font-medium rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-950 transition"
+                className="w-full md:w-auto px-7 py-3.5 bg-[#ff5d35] text-white font-semibold rounded-full hover:-translate-y-0.5 hover:bg-[#ff7048] focus:outline-none focus:ring-2 focus:ring-[#ff7048] transition"
               >
                 Send message
               </button>
@@ -133,12 +130,12 @@ export default function ContactCard() {
           </div>
 
           {/* ───── RIGHT – IMAGE ───── */}
-          <div className="relative h-96 lg:h-full rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative min-h-[420px] lg:min-h-full overflow-hidden">
             <Image
               src="/images/contact/contactus-02.webp"   // put your own image in public/images/
               alt="Team collaborating"
               fill
-              className="object-cover"
+              className="object-cover transition-transform duration-1000 hover:scale-105"
             />
           </div>
         </div>

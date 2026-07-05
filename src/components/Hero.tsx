@@ -1,6 +1,5 @@
 "use client"
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -14,10 +13,6 @@ export default function Hero() {
       const [videoSource, setVideoSource] = useState('/videos/banners/banner-01.mov');
 
       useEffect(() => {
-    // Log video URLs for debugging
-    console.log("Desktop video URL:", '/videos/banners/banner-01.mov');
-    console.log("Mobile video URL:", "/videos/banners/banner-02.mov");
-
     // Function to update video source based on screen width
     const updateVideoSource = () => {
       const isMobile = window.innerWidth <= 768; // Mobile breakpoint
@@ -35,57 +30,51 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative min-w-full">
-      <div className="absolute z-10 inset-0 w-[100%] px-2">
+    <section className="relative flex min-h-[760px] items-end overflow-hidden sm:min-h-[820px] lg:min-h-screen">
+      <div className="absolute inset-0">
         <video
         key={videoSource}
         autoPlay
         loop
         muted
         playsInline  
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "auto", // Use natural height
-          // transform: "translate(-50%, -50%)", // Center video
-          zIndex: -1,
-        }}
+        className="h-full w-full object-cover"
       >
         <source src={videoSource} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-        {/* <div className="absolute min-h-screen inset-0 bg-gradient-to-b from-gray-900/30 via-gray-900/30 to-gray-900/30"></div> */}
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,9,13,.94)_0%,rgba(7,9,13,.58)_52%,rgba(7,9,13,.22)_100%)]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#07090d] via-transparent to-black/25" />
+        <div className="noise-overlay" />
       </div>
 
       {/* Content */}
-       <div className="relative z-10 mx-25 max-w-2xl py-32 sm:py-48 lg:py-20 xl:py-56">
+       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-20 pt-40 sm:px-6 sm:pb-24 lg:px-8 lg:pb-28">
           <div className="hidden sm:mb-8 sm:flex sm:justify-start">
-            <div className="relative rounded-full px-3 py-1 z-[100] inset-0 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
-              Announcing our full production process.{' '}
-              <a href="#process" className="font-semibold text-indigo-400">
+            <div className="relative rounded-full px-4 py-2 z-[100] inset-0 text-xs uppercase tracking-[.14em] text-white/55 ring-1 ring-white/10 hover:ring-white/20">
+              Creative production · Since 2018{' '}
+              <a href="#process" className="font-semibold text-[#ff7b55]">
                 <span aria-hidden="true" className="absolute inset-0 z-55" />
                 Read more <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>
-          <div className="text-start">
-            <h1 className="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">
-              Welcome to Our Creative Playground
+          <div className="max-w-4xl text-start">
+            <h1 className="display-title text-white">
+              Ideas with an <span className="text-[#ff6a42]">unskippable</span> first frame.
             </h1>
-            <p className="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
-              We turn ideas into impactful visual experiences. Concept to Result, we blend creativity and strategy to craft unskippable visuals.
+            <p className="mt-7 max-w-2xl text-base leading-7 text-white/65 sm:text-xl sm:leading-8">
+              From concept to final cut, we combine strategy, craft, and a little beautiful obsession to make work people remember.
             </p>
             <div className="mt-10 flex items-center justify-start gap-x-6">
               <Link
                 href="/contact"
-                className="rounded-md bg-gray-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                className="rounded-full bg-[#ff5d35] px-6 py-3.5 text-sm font-semibold text-white shadow-xl shadow-orange-950/30 hover:-translate-y-0.5 hover:bg-[#ff7048]"
               >
-                Get started
+                Start a project <span className="ml-2">↗</span>
               </Link>
-              <a href="#service" className="text-sm/6 font-semibold text-white">
-                Learn more <span aria-hidden="true">→</span>
+              <a href="#service" className="rounded-full border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white/10">
+                Explore our work <span className="ml-2" aria-hidden="true">↓</span>
               </a>
             </div>
           </div>
@@ -102,6 +91,6 @@ export default function Hero() {
             className="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"
           />
         </div>
-    </div>
+    </section>
   );
 }

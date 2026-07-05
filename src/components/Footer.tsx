@@ -15,7 +15,7 @@ const currentYear = new Date().getFullYear();
 const footerData = {
   logo: {
     title: 'Lets start project together',
-    text: 'We truly listen to you to grasp your vision and who you want to reach. Then, we roll up our sleeves and use all our creative talents from making stunning videos to crafting compelling designs and building powerful online strategies to deliver solutions that genuinely connect with your audience and make your brand shine.',
+    text: 'We listen closely, find the sharpest version of your idea, then bring it to life through film, motion, design and digital craft.',
     href: '#',
   },
   columns: [
@@ -36,17 +36,18 @@ const footerData = {
     { icon: RiLinkedinFill, label: 'LinkedIn', href: '#' },
     { icon: RiYoutubeFill, label: 'YouTube', href: '#' },
   ],
-  copyright: `© ${currentYear} Your Company, Inc. All rights reserved.`,
+  copyright: `© ${currentYear} PostPro Global. All rights reserved.`,
 };
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-400 border-t border-gray-600">
-      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-[#05070a] text-gray-400">
+      <div className="absolute -right-40 top-0 size-96 rounded-full bg-[#ff5d35]/10 blur-3xl" />
+      <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-12">
           {/* Logo + Description + Social */}
-          <div className="lg:col-span-4 space-y-6">
+          <div className="lg:col-span-5 space-y-6">
             {/* Logo */}
             <div className="flex items-center gap-2">
               {/* <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center"> */}
@@ -62,10 +63,10 @@ export default function Footer() {
             </div>
 
             {/* Description */}
-            <p className="text-2xl text-white max-w-xs">
+            <p className="max-w-sm text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               {footerData.logo.title}
             </p>
-            <p className="text-sm text-gray-400 max-w-xs">
+            <p className="max-w-md text-sm leading-6 text-white/45">
               {footerData.logo.text}
             </p>
 
@@ -78,7 +79,7 @@ export default function Footer() {
                     key={social.label}
                     href={social.href}
                     aria-label={social.label}
-                    className="text-gray-500 hover:text-white transition-colors"
+                    className="grid size-9 place-items-center rounded-full border border-white/10 text-gray-500 hover:border-white/30 hover:text-white transition-colors"
                   >
                     <Icon size={18} />
                   </a>
@@ -99,7 +100,7 @@ export default function Footer() {
                     {column.links.map((link) => (
                       <li key={link}>
                         <a
-                          href="#"
+                          href={link === 'Home' ? '/' : link === 'About' ? '/about' : link === 'Contact' ? '/contact' : link.includes('@') ? `mailto:${link}` : link.startsWith('(') ? `tel:${link.replace(/[^+\d]/g, '')}` : '#'}
                           className="text-sm text-gray-400 hover:text-white transition-colors"
                         >
                           {link}
@@ -117,7 +118,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Divider + Copyright */}
-        <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="mt-14 pt-7 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray-500">{footerData.copyright}</p>
         </div>
       </div>

@@ -30,10 +30,10 @@ const contactData = {
 
 export default function ContactInfo() {
   return (
-    <section className="bg-tranparent py-16 md:py-20 lg:py-24">
+    <section className="section-pad">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl text-center font-bold text-gray-200 flex items-center justify-center gap-3 mb-12">
+        <p className="eyebrow mb-4 text-center">Reach us directly</p><h2 className="section-title text-center text-gray-100 mb-12">
           {contactData.title}
           {/* {contactData.spark && (
             <span className="text-4xl text-lime-500 animate-pulse">Spark</span>
@@ -54,16 +54,16 @@ export default function ContactInfo() {
             target={isAddress ? '_blank' : undefined}
             rel={isAddress ? 'noopener noreferrer' : undefined}
             className={`
-              group block bg-gray-900 text-gray-300 p-6 rounded-2xl
+              glass-card group block text-gray-300 p-6 rounded-2xl
               transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl
-              hover:bg-gray-800
+              hover:border-white/20
               ${isFullWidth ? 'md:col-span-2' : ''}
             `}
           >
             <div className="flex items-start gap-4">
               {/* Icon */}
-              <div className="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-gray-700 transition">
-                <Icon size={24} className="text-gray-400 group-hover:text-white" />
+              <div className="flex-shrink-0 w-12 h-12 bg-[#ff5d35]/10 rounded-full flex items-center justify-center group-hover:bg-[#ff5d35] transition">
+                <Icon size={22} className="text-[#ff7952] group-hover:text-white" />
               </div>
 
               {/* Text */}

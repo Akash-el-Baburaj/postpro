@@ -8,23 +8,21 @@ import Hero from "@/components/Hero";
 import Process from "@/components/Processes";
 import HorizontalScrollAnimation from '@/components/ServiceScroll'
 import Teams from "@/components/TeamsSection";
-import HorizontalScrollSection from "@/components/VerticalScrollCards";
-import Image from "next/image";
 
 export default function Home() {
   return (
    <>
-      <div className="font-sans relative isolate bg-gray-900 overflow-hidden items-center justify-items-center">
+      <div className="relative isolate overflow-hidden">
         <Hero />
         <FadeContent blur={true} duration={1500} easing="ease-out" initialOpacity={0}>
           <Features />  
         </FadeContent>
       </div>
-       <div className="relative min-h-screen min-w-full overflow-hidden">
+       <div className="relative overflow-hidden">
           <ComparisonSection />
         </div> 
-      <div className="relative isolate bg-gray-900 pt-4 pb-6 sm:pt-32 md:pt-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="relative isolate overflow-hidden">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
           
           <FadeContent blur={true} duration={1500} easing="ease-out" initialOpacity={0}>
             <div >

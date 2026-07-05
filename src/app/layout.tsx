@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "POSTPRO",
-  description: "Professional post production services for media and film.",
+  title: "PostPro — Creative Production Studio",
+  description: "Films, visual effects, motion, design and digital experiences crafted to make brands unforgettable.",
 };
 
 export default function RootLayout({
@@ -24,9 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>

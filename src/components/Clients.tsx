@@ -16,6 +16,10 @@ const sliderData: SliderItem[] = [
   { id: crypto.randomUUID(), img: '/images/client/12.png' },
   { id: crypto.randomUUID(), img: '/images/client/colour logo-06.png' },
   { id: crypto.randomUUID(), img: '/images/client/14.png' },
+  { id: crypto.randomUUID(), img: '/images/client/30.png' },
+  { id: crypto.randomUUID(), img: '/images/client/31.png' },
+  { id: crypto.randomUUID(), img: '/images/client/32.png' },
+  { id: crypto.randomUUID(), img: '/images/client/33.png' },
   { id: crypto.randomUUID(), img: '/images/client/11.png' },
   { id: crypto.randomUUID(), img: '/images/client/colour logo-02.png' },
   { id: crypto.randomUUID(), img: '/images/client/colour logo-03.png' },
@@ -31,7 +35,7 @@ const sliderData: SliderItem[] = [
   { id: crypto.randomUUID(), img: '/images/client/24.png' },
   { id: crypto.randomUUID(), img: '/images/client/21.png' },
   { id: crypto.randomUUID(), img: '/images/client/20.png' },
-  { id: crypto.randomUUID(), img: '/images/client/wb.png' },
+  // { id: crypto.randomUUID(), img: '/images/client/wb.png' },
   { id: crypto.randomUUID(), img: '/images/client/25.png' },
   { id: crypto.randomUUID(), img: '/images/client/29.png' },
   { id: crypto.randomUUID(), img: '/images/client/22.png' },
@@ -40,16 +44,16 @@ const sliderData: SliderItem[] = [
 
 export default function Clients() {
   return (
-    <section className="min-h-[40vh] bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center mt-10 mb-20">
+    <section className="section-pad text-white px-0 flex flex-col items-center justify-center">
       <div className="max-w-7xl mx-auto w-full text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Clients</h2>
+        <p className="eyebrow mb-4">Trusted company</p><h2 className="section-title">Brands we&apos;ve created with.</h2>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 w-full max-w-9xl gap-px overflow-hidden rounded-2xl border border-slate-800 bg-slate-800">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 w-full gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10">
         {sliderData.map((item) => (
          <div
-            key={item.id}
-            className="group flex items-center justify-center bg-slate-900 p-6 hover:bg-slate-100 transition-all duration-150"
+            key={item.img}
+            className="group flex min-h-28 items-center justify-center bg-[#0d1015] p-6 hover:bg-white transition-all duration-300"
           >
             <Image
               src={item.img}

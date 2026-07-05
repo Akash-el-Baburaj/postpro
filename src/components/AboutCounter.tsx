@@ -1,11 +1,10 @@
-import Image from 'next/image';
 import ModalVideo from './ModalVideo';
 
 export default function AboutCounter() {
   return (
-    <div className="flex flex-col md:flex-row rounded rounded-lg text-white bg-gray-800 backdrop-blur-md py-16 mt-10">
+    <section className="glass-card my-20 flex flex-col overflow-hidden rounded-[2rem] text-white md:flex-row">
       {/* Image Section */}
-      <div className="w-full md:w-1/2 p-4 md:p-2">
+      <div className="w-full md:w-1/2 p-3">
         {/* <Image
           src="/path-to-your-image.jpg" // Replace with the actual image path
           alt="Creators working"
@@ -17,23 +16,24 @@ export default function AboutCounter() {
       </div>
 
       {/* Text and Stats Section */}
-      <div className="w-full md:w-1/2 p-4 md:p-8 flex flex-col justify-center ">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">We make brand memorable.</h2>
-        <p className="text-gray-400 mb-6">
+      <div className="w-full p-7 md:w-1/2 md:p-10 lg:p-14 flex flex-col justify-center ">
+        <p className="eyebrow mb-4">Built for impact</p>
+        <h2 className="section-title mb-5">We make brands memorable.</h2>
+        <p className="text-white/50 mb-9 leading-7">
             Bold brand stories, scroll stopping reels, we help your business shine through visuals that people remember and love.
         </p>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-3 gap-4 border-t border-white/10 pt-7">
           <div>
-            <p className="text-2xl md:text-3xl font-semibold">8+</p>
-            <p className="text-gray-400">Years of experience</p>
+            <p className="text-2xl md:text-3xl font-semibold text-[#ff7952]">8+</p>
+            <p className="mt-1 text-xs leading-5 text-white/45">Years of experience</p>
           </div>
           <div>
-            <p className="text-2xl md:text-3xl font-semibold">250+</p>
-            <p className="text-gray-400">Successful projects</p>
+            <p className="text-2xl md:text-3xl font-semibold text-[#ff7952]">250+</p>
+            <p className="mt-1 text-xs leading-5 text-white/45">Successful projects</p>
           </div>
           <div>
-            <p className="text-2xl md:text-3xl font-semibold">100%</p>
-            <p className="text-gray-400">Client satisfaction rate</p>
+            <p className="text-2xl md:text-3xl font-semibold text-[#ff7952]">100%</p>
+            <p className="mt-1 text-xs leading-5 text-white/45">Client satisfaction</p>
           </div>
 
         </div>
@@ -64,6 +64,6 @@ export default function AboutCounter() {
         </div> */}
 
         
-    </div>
+    </section>
   );
 }

@@ -32,7 +32,7 @@ export default function ContactDropdown({ isOpen, onClose }: ContactDropdownProp
   return (
     <div
       ref={dropdownRef}
-      className="absolute right-0 mt-3 w-[360px] bg-gray-800 rounded-2xl shadow-xl border border-gray-900 z-50"
+      className="absolute right-0 mt-3 w-[min(360px,calc(100vw-2rem))] bg-[#0d1015]/95 rounded-2xl shadow-2xl shadow-black/40 border border-white/10 backdrop-blur-xl z-50"
     >
       {/* Header with Cancel Button */}
       <div className="flex items-center justify-between p-4 border-b border-gray-900">
@@ -129,7 +129,7 @@ export default function ContactDropdown({ isOpen, onClose }: ContactDropdownProp
           {/* Submit */}
           <button
             type="submit"
-            className="w-full bg-indigo-500 text-white py-2 rounded-md font-medium hover:bg-indigo-600 transition"
+            className="w-full bg-[#ff5d35] text-white py-2.5 rounded-full font-medium hover:bg-[#ff7048] transition"
           >
             Let&apos;s talk
           </button>

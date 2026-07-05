@@ -28,6 +28,7 @@ import Image from 'next/image';
 // }
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import ContactDropdown from './ContactModal';
 
@@ -35,6 +36,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,20 +53,20 @@ export default function Header() {
 
   return (
     <header
-  className={`fixed top-0 left-0 w-full text-white z-50 transition-all duration-300 pointer-events-none`}
+  className="fixed inset-x-0 top-0 z-50 px-3 pt-3 text-white sm:px-5 sm:pt-4 pointer-events-none"
 >
   <nav
-    className={`container mx-auto px-4 py-4 flex justify-between items-center pointer-events-auto ${
+    className={`mx-auto max-w-7xl rounded-2xl border px-4 py-3 flex justify-between items-center pointer-events-auto transition-all duration-500 ${
       isScrolled
-        ? 'backdrop-blur-md bg-gray-900/60'
-        : 'bg-transparent'
+        ? 'backdrop-blur-xl bg-[#0b0d12]/90 border-white/10 shadow-2xl shadow-black/20'
+        : 'bg-transparent border-transparent'
     }`}
   >
     {/* Hamburger Menu for Mobile */}
     <div className="md:hidden">
       <button
         onClick={toggleMobileMenu}
-        className="text-white focus:outline-none"
+        className="grid size-10 place-items-center rounded-full border border-white/15 bg-white/5 text-white focus:outline-none"
         aria-label="Toggle menu"
       >
         <svg
@@ -91,17 +93,17 @@ export default function Header() {
     {/* Logo */}
     <Image
       src="/images/logo-white.png"
-      alt="Logo"
-      width={100}
+      alt="PostPro"
+      width={112}
       height={50}
-      className="opacity-80"
+      className="h-8 w-auto object-contain"
     />
 
     {/* Desktop Links */}
-    <div className="hidden md:flex space-x-6">
-      <Link href="/" className="hover:text-blue-400">Home</Link>
-      <Link href="/about" className="hover:text-blue-400">About</Link>
-      <Link href="/contact" className="hover:text-blue-400">Contact</Link>
+    <div className="hidden md:flex items-center gap-1 rounded-full border border-white/10 bg-white/[.04] p-1">
+      <Link href="/" className={`rounded-full px-4 py-2 text-sm font-medium ${pathname === '/' ? 'bg-white text-black' : 'text-white/65 hover:text-white'}`}>Home</Link>
+      <Link href="/about" className={`rounded-full px-4 py-2 text-sm font-medium ${pathname === '/about' ? 'bg-white text-black' : 'text-white/65 hover:text-white'}`}>About</Link>
+      <Link href="/contact" className={`rounded-full px-4 py-2 text-sm font-medium ${pathname === '/contact' ? 'bg-white text-black' : 'text-white/65 hover:text-white'}`}>Contact</Link>
       {/* <Link href="/company" className="hover:text-blue-400">Company</Link> */}
     </div>
 
@@ -110,9 +112,9 @@ export default function Header() {
        <div className="relative">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="hover:text-white text-gray-900 font-medium rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold shadow-xs hover:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+            className="rounded-full bg-[#ff5d35] px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-orange-950/30 hover:-translate-y-0.5 hover:bg-[#ff7048]"
           >
-            Contact Now
+            Start a project <span className="ml-1">↗</span>
           </button>
 
           <ContactDropdown
@@ -124,14 +126,14 @@ export default function Header() {
 
     {/* Mobile Drawer */}
     {isMobileMenuOpen && (
-      <div className="md:hidden absolute top-16 left-0 w-full bg-gray-900 bg-opacity-95 p-4 flex flex-col backdrop-blur-sm bg-opacity-80 space-y-4">
-        <Link href="/" className="hover:text-blue-400" onClick={toggleMobileMenu}>
+      <div className="md:hidden absolute top-16 left-0 w-full rounded-2xl border border-white/10 bg-[#0b0d12]/95 p-4 flex flex-col backdrop-blur-xl shadow-2xl space-y-2">
+        <Link href="/" className="rounded-xl px-3 py-2 hover:bg-white/10" onClick={toggleMobileMenu}>
           Home
         </Link>
-        <Link href="/about" className="hover:text-blue-400" onClick={toggleMobileMenu}>
+        <Link href="/about" className="rounded-xl px-3 py-2 hover:bg-white/10" onClick={toggleMobileMenu}>
           About
         </Link>
-        <Link href="/contact" className="hover:text-blue-400" onClick={toggleMobileMenu}>
+        <Link href="/contact" className="rounded-xl px-3 py-2 hover:bg-white/10" onClick={toggleMobileMenu}>
           Contact
         </Link>
         {/* <Link href="/company" className="hover:text-blue-400" onClick={toggleMobileMenu}>

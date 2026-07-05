@@ -1,6 +1,6 @@
 // import { RiCodeSSlashFill, RiServerFill, RiDatabase2Fill } from '@remixicon/react';
 
-import { title } from "process";
+import Image from 'next/image';
 
 export default function Features() {
   const features = [
@@ -35,25 +35,29 @@ export default function Features() {
   ];
 
   return (
-    <div className="min-h-[40vh] bg-transparent text-white py-12 px-4 sm:px-6 lg:px-8 flex items-center mt-20 mb-20">
+    <section className="section-pad bg-transparent text-white px-5 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto w-full text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">What I Do</h2>
-        <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-          I build comprehensive web solutions from frontend interfaces to backend systems, delivering scalable and user-friendly applications.
+        <p className="eyebrow mb-4">Capabilities</p>
+        <h2 className="section-title mb-5">Everything a bold story needs.</h2>
+        <p className="text-white/50 mb-12 max-w-2xl mx-auto text-base leading-7">
+          One close-knit team shaping the idea, the image, and every detail between them.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
           {features.map((feature, index) => (
             <div
               key={index}
-                className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out text-center hover:scale-[1.02]"            >
+                className="glass-card group relative overflow-hidden rounded-3xl p-7 text-left transition-all duration-500 hover:-translate-y-1 hover:border-white/20 sm:p-9"            >
               {/* <feature.icon className="w-10 h-10 text-indigo-400 mx-auto mb-4" /> */}
-              <img
+              <Image
                 src={feature.icon}
                 alt={`${feature.title} icon`}
-                className="w-18 h-18 mx-auto mb-4 object-contain filter invert"
+                width={72}
+                height={72}
+                className="mb-10 h-14 w-14 object-contain filter invert opacity-90 transition-transform duration-500 group-hover:rotate-3 group-hover:scale-110"
               />
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-400 text-sm mb-4">{feature.description}</p>
+              <div className="absolute right-7 top-7 font-mono text-xs text-white/25">0{index + 1}</div>
+              <h3 className="text-2xl font-semibold tracking-tight mb-3">{feature.title}</h3>
+              <p className="text-white/50 text-sm leading-6 mb-4">{feature.description}</p>
               {/* <a href="#" className="text-indigo-400 hover:underline text-sm">
                 Learn more →
               </a> */}
@@ -68,6 +72,6 @@ export default function Features() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

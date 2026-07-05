@@ -15,9 +15,9 @@ export default function Contact() {
           className="relative left-1/2 -z-10 aspect-1155/678 w-144.5 max-w-none -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-40rem)] sm:w-288.75"
         />
       </div>
-      <div className="mx-auto max-w-2xl text-center">
+      <div className="mx-auto max-w-2xl text-left">
         {/* <h2 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Contact sales</h2> */}
-        <p className="mt-2 text-lg/8 text-gray-400">Send us a message</p>
+        <p className="mb-3 text-xs font-bold uppercase tracking-[.16em] text-[#ff7952]">Quick enquiry</p>
       </div>
       <form action="#" method="POST" className="mx-auto mt-0 max-w-xl sm:mt-0">
         <div className="grid grid-cols-1 gap-x-8 gap-y-2 sm:grid-cols-2">
@@ -32,7 +32,7 @@ export default function Contact() {
                 type="text"
                 placeholder='First name'
                 autoComplete="given-name"
-                className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
+                className="block w-full rounded-xl bg-white/5 px-3.5 py-2.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-600 focus:outline-2 focus:-outline-offset-2 focus:outline-[#ff7048]"
               />
             </div>
           </div>
@@ -47,7 +47,7 @@ export default function Contact() {
                 type="text"
                 placeholder='Last name'
                 autoComplete="family-name"
-                className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
+                className="block w-full rounded-xl bg-white/5 px-3.5 py-2.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-600 focus:outline-2 focus:-outline-offset-2 focus:outline-[#ff7048]"
               />
             </div>
           </div>
@@ -62,7 +62,7 @@ export default function Contact() {
                 type="email"
                 placeholder='Email'
                 autoComplete="email"
-                className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
+                className="block w-full rounded-xl bg-white/5 px-3.5 py-2.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-600 focus:outline-2 focus:-outline-offset-2 focus:outline-[#ff7048]"
               />
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function Contact() {
               Phone number
             </label> */}
             <div className="mt-2.5">
-              <div className="flex rounded-md bg-white/5 outline-1 -outline-offset-1 outline-white/10 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-500">
+              <div className="flex rounded-xl bg-white/5 outline-1 -outline-offset-1 outline-white/10 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-[#ff7048]">
                 <div className="grid shrink-0 grid-cols-1 focus-within:relative">
                   <select
                     id="country"
@@ -80,9 +80,9 @@ export default function Contact() {
                     aria-label="Country"
                     className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-transparent py-2 pr-7 pl-3.5 text-base text-gray-400 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
                   >
-                    <option className='text-dark'>+91</option>
-                    <option className='text-dark'>+1</option>
-                    <option className='text-dark'>+921</option>
+                    <option className='text-black'>+91</option>
+                    <option className='text-black'>+1</option>
+                    <option className='text-black'>+44</option>
                   </select>
                   <RiArrowDownWideLine
                     aria-hidden="true"
@@ -109,7 +109,7 @@ export default function Contact() {
                 name="message"
                 rows={4}
                 placeholder='Message...'
-                className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
+                className="block w-full rounded-xl bg-white/5 px-3.5 py-2.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-600 focus:outline-2 focus:-outline-offset-2 focus:outline-[#ff7048]"
                 defaultValue={''}
               />
             </div>
@@ -118,7 +118,7 @@ export default function Contact() {
         <div className="mt-4">
           <button
             type="submit"
-            className="block w-full rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+            className="block w-full rounded-full bg-[#ff5d35] px-3.5 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-orange-950/20 hover:bg-[#ff7048] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7048]"
           >
             Let&apos;s talk
           </button>

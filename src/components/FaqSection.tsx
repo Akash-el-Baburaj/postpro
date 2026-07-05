@@ -3,7 +3,7 @@
 import { RiQuestionLine } from '@remixicon/react';
 
 const faqData = {
-  title: 'These FAQs helpclients learn about us',
+  title: 'Good questions, straight answers.',
   description:
     'Have a different question and can’t find the answer you’re looking for? Reach out to our support team by sending us an email and we’ll get back to you as soon as we can.',
   items: [
@@ -52,27 +52,27 @@ const faqData = {
 
 export default function FAQSection() {
   return (
-    <section className="bg-gray-950 py-16 md:py-20 lg:py-24">
+    <section className="section-pad">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
-        <h2 className="text-3xl md:text-4xl text-center lg:text-5xl font-bold text-white mb-4">
+        <p className="eyebrow mb-4 text-center">FAQ</p><h2 className="section-title text-center text-white mb-5">
           {faqData.title}
         </h2>
-        <p className="text-gray-400 text-center mb-12 max-w-7xl px-25">
+        <p className="mx-auto max-w-2xl text-center text-sm leading-6 text-white/45 mb-12">
           {faqData.description}
         </p>
 
         {/* FAQ Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {faqData.items.map((item, index) => (
+          {faqData.items.map((item) => (
             <div
-              key={index}
-              className="group p-6 rounded-2xl  hover:bg-gray-800/70 hover:border-gray-700 transition-all duration-300"
+              key={item.question}
+              className="glass-card group p-6 rounded-2xl hover:-translate-y-1 transition-all duration-300"
             >
               <div className="flex items-start gap-3">
                 <RiQuestionLine
                   size={24}
-                  className="text-indigo-500 flex-shrink-0 mt-1 group-hover:text-indigo-400 transition"
+                  className="text-[#ff7148] flex-shrink-0 mt-1 transition"
                 />
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">

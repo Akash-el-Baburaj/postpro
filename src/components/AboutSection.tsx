@@ -93,11 +93,11 @@ import Image from 'next/image';
 
 export default function AboutSection() {
   return (
-    <section className="bg-gradient-to-b from-gray-900 to-gray-900 text-white py-16 md:py-24 lg:py-32">
+    <section className="section-pad pt-36! text-white sm:pt-44!">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <h1 className="text-3xl md:text-4xl lg:text-5xl mt-10 font-bold mb-12 max-w-4xl">
-          We think our story is worth sharing with you
+        <p className="eyebrow mb-5">About PostPro</p><h1 className="display-title mb-16 max-w-5xl">
+          Craft first. Ego last. <span className="text-white/35">Always curious.</span>
         </h1>
 
         {/* ==== MAIN GRID ==== */}
@@ -105,7 +105,7 @@ export default function AboutSection() {
           {/* ---- LEFT: TEXT ---- */}
           <div className="space-y-10 order-first">
             {/* Intro paragraph */}
-            <p className="text-gray-300 text-base leading-relaxed">
+            <p className="text-white/60 text-lg leading-8">
               Established in 2018, we began as a small but ambitious team. We understood the
               importance of creative and tech-savvy solutions to help businesses succeed in the
               ever-changing digital landscape.
@@ -113,7 +113,7 @@ export default function AboutSection() {
 
             {/* Mission 1 */}
             <div>
-              <h2 className="text-xl font-semibold mb-3 text-white">Our mission</h2>
+              <h2 className="text-xl font-semibold mb-3 text-white"><span className="mr-3 text-[#ff7148]">01</span>Our mission</h2>
               <p className="text-gray-300 text-sm leading-relaxed mb-4">
                 Empowering businesses to create impactful and visually stunning brand experiences
                 that captivate audiences and drive success in the digital age.
@@ -127,7 +127,7 @@ export default function AboutSection() {
 
             {/* Mission 2 */}
             <div>
-              <h2 className="text-xl font-semibold mb-3 text-white">Our main mission</h2>
+              <h2 className="text-xl font-semibold mb-3 text-white"><span className="mr-3 text-[#ff7148]">02</span>Our promise</h2>
               <p className="text-gray-300 text-sm leading-relaxed mb-4">
                 Our mission is to collaborate with businesses of all sizes, from startups to
                 established brands, to provide innovative and creative design solutions.
